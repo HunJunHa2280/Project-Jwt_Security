@@ -4,12 +4,13 @@ import com.example.jdncprojcet8.dto.CreateRequestDto;
 import com.example.jdncprojcet8.entity.Student;
 import com.example.jdncprojcet8.repository.StudentRepository;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-@AllArgsConstructor // 생성자 생략을 위해 사용
+@RequiredArgsConstructor
 public class StudentService {
 
     private final StudentRepository studentRepository;
