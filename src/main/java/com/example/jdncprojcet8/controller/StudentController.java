@@ -37,4 +37,9 @@ public class StudentController {
     public List<Student> deleteStudent(@PathVariable Long id) {
         return studentService.deleteStudent(id);
     }
+
+    @GetMapping("/student/{id}")
+    public Student getStudent(@PathVariable Long id) {
+        return studentService.geOnetStudent(id);
+    }
 }

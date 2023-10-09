@@ -40,4 +40,9 @@ public class StudentService {
         studentRepository.delete(student);
         return studentRepository.findAll(); // findByAll이 학생을 가져오면 제거하고 남은 학생을 보이게 리턴
     }
+
+    public Student geOnetStudent(Long id) {
+        return studentRepository.findById(id).orElseThrow(() ->
+                new NullPointerException("해당 학생은 없는 학생입니다."));
+    }
 }

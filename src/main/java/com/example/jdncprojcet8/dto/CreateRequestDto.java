@@ -16,6 +16,4 @@ public class CreateRequestDto {
     private boolean car;
     private String extra;
 
-
-
 }
