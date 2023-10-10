@@ -2,6 +2,7 @@ package com.example.jdncprojcet8.controller;
 
 
 import com.example.jdncprojcet8.dto.CreateRequestDto;
+import com.example.jdncprojcet8.dto.CreateResponseDto;
 import com.example.jdncprojcet8.entity.Student;
 import com.example.jdncprojcet8.repository.StudentRepository;
 import com.example.jdncprojcet8.service.StudentService;
@@ -18,7 +19,7 @@ public class StudentController {
     private final StudentService studentService;
 
     @PostMapping("/student")
-    public Student createStudent(@RequestBody CreateRequestDto createRequestDto) {
+    public CreateResponseDto createStudent(@RequestBody CreateRequestDto createRequestDto) {
         return studentService.createStudent(createRequestDto);
     }
 

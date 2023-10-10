@@ -1,9 +1,9 @@
 package com.example.jdncprojcet8.service;
 
 import com.example.jdncprojcet8.dto.CreateRequestDto;
+import com.example.jdncprojcet8.dto.CreateResponseDto;
 import com.example.jdncprojcet8.entity.Student;
 import com.example.jdncprojcet8.repository.StudentRepository;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,11 +15,15 @@ public class StudentService {
 
     private final StudentRepository studentRepository;
 
-    public Student createStudent(CreateRequestDto createRequestDto) {
+    public CreateResponseDto createStudent(CreateRequestDto createRequestDto) {
         Student student = new Student();
         student.set(createRequestDto);
         studentRepository.save(student);
-        return student;
+
+        CreateResponseDto createResponseDto = new CreateResponseDto();
+        createResponseDto.set(student);
+
+        return createResponseDto;
     }
 
     public List<Student> getStudent() {
