@@ -9,7 +9,7 @@ import lombok.Getter;
 @Getter
 @Entity
 @JsonSerialize
-public class Student {
+public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

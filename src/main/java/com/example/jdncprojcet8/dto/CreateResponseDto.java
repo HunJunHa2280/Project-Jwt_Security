@@ -1,6 +1,6 @@
 package com.example.jdncprojcet8.dto;
 
-import com.example.jdncprojcet8.entity.Student;
+import com.example.jdncprojcet8.entity.Room;
 import lombok.Getter;
 
 @Getter
@@ -21,21 +21,21 @@ public class CreateResponseDto {
     private boolean car;
     private String extra;
 
-    public void set(Student student) {
+    public void set(Room room) {
 
-        this.id = student.getId();
-        this.name = student.getName();
-        this.age = student.getAge();
-        this.male = student.isMale();
-        this.female = student.isFemale();
-        this.family = student.getFamily();
-        this.phone = student.getPhone();
-        this.otherPhone = student.getOtherPhone();
-        this.pay = student.getPay();
-        this.depositdate = student.getDepositdate();
-        this.teacher = student.getTeacher();
-        this.car = student.isCar();
-        this.extra = student.getExtra();
+        this.id = room.getId();
+        this.name = room.getName();
+        this.age = room.getAge();
+        this.male = room.isMale();
+        this.female = room.isFemale();
+        this.family = room.getFamily();
+        this.phone = room.getPhone();
+        this.otherPhone = room.getOtherPhone();
+        this.pay = room.getPay();
+        this.depositdate = room.getDepositdate();
+        this.teacher = room.getTeacher();
+        this.car = room.isCar();
+        this.extra = room.getExtra();
 
     }
 }
