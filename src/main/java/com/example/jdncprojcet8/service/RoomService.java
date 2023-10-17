@@ -51,7 +51,7 @@ public class RoomService {
 
     public Room geOnetRoom(Long id) {
         return roomRepository.findById(id).orElseThrow(() ->
-                new NullPointerException("해당 회의실은 없는 학생입니다."));
+                new NullPointerException("해당 회의실은 없는 회의실입니다."));
         // 한명만 조회
     }
 }

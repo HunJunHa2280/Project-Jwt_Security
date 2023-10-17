@@ -23,7 +23,7 @@ public class RoomController {
     }
 
     @GetMapping("/room")
-    public List<Room> getAllStudent() {
+    public List<Room> getAllRoom() {
         return roomService.getRoom();
     }
 
