@@ -17,15 +17,12 @@ public class Room {
     @Column
     private String name;
     @Column
-    private int number;
-    @Column
     private boolean canuse;
     @Column
     private int floors;
 
     public void set(CreateRequestDto createRequestDto) {
         this.name = createRequestDto.getName();
-        this.number = createRequestDto.getNumber();
         this.canuse = createRequestDto.isCanuse();
         this.floors = createRequestDto.getFloors();
     }
