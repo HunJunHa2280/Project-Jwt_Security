@@ -6,6 +6,9 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.persistence.*;
 import lombok.Getter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Getter
 @Entity
 @JsonSerialize
@@ -20,6 +23,8 @@ public class Room {
     private boolean canuse;
     @Column
     private int floors;
+
+
 
     public void set(CreateRequestDto createRequestDto) {
         this.name = createRequestDto.getName();

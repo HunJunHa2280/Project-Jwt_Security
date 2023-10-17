@@ -17,10 +17,10 @@ public class RoomController {
 
     private final RoomService roomService;
 
-    @PostMapping("/room")
-    public CreateResponseDto createRoom(@RequestBody CreateRequestDto createRequestDto) {
-        return roomService.createRoom(createRequestDto);
-    }
+//    @PostMapping("/room")
+//    public CreateResponseDto createRoom(@RequestBody CreateRequestDto createRequestDto) {
+//        return roomService.createRoom(createRequestDto);
+//    }
 
     @GetMapping("/room")
     public List<Room> getAllRoom() {
@@ -31,11 +31,6 @@ public class RoomController {
     public Room update(@RequestBody CreateRequestDto createRequestDto,
                        @PathVariable Long id) {
         return roomService.update(id,createRequestDto);
-    }
-
-    @DeleteMapping("/room/{id}")
-    public List<Room> deleteRoom(@PathVariable Long id) {
-        return roomService.deleteRoom(id);
     }
 
     @GetMapping("/room/{id}")

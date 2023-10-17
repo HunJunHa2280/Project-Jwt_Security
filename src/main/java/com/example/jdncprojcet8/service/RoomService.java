@@ -40,15 +40,6 @@ public class RoomService {
         // 업데이트
     }
 
-    public List<Room> deleteRoom(Long id) {
-        Room room = roomRepository.findById(id).orElseThrow( () ->
-                new NullPointerException("해당 회의실은 존재하지 않습니다."));
-
-        roomRepository.delete(room);
-        return roomRepository.findAll(); // findByAll이 학생을 가져오면 제거하고 남은 학생을 보이게 리턴
-        // 삭제
-    }
-
     public Room geOnetRoom(Long id) {
         return roomRepository.findById(id).orElseThrow(() ->
                 new NullPointerException("해당 회의실은 없는 회의실입니다."));

@@ -20,5 +20,10 @@ public class RoomUseTime {
     @Column
     private String time;
 
+    @ManyToOne
+    @JoinColumn(name = "room_id")
+    private Room room;
+
+
 
 }

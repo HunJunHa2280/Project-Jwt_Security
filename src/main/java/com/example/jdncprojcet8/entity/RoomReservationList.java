@@ -13,6 +13,8 @@ public class RoomReservationList {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
+    @ManyToOne
+    @JoinColumn(name = "room_use_time")
+    private RoomUseTime roomUseTime;
 
 }
